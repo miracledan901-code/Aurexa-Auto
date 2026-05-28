@@ -1,0 +1,201 @@
+/* Core Reset & Fonts */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background-color: #060608;
+    color: #e2e8f0;
+    overflow-x: hidden;
+}
+
+/* 1. Glassmorphism Navigation Styling */
+.car-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 6%;
+    background: rgba(6, 6, 8, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    backdrop-filter: blur(15px);
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    color: #ffffff;
+}
+
+.logo span {
+    color: #ff3344; /* Electric Crimson Red */
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #ff3344;
+}
+
+/* 2. Premium Hero Showroom Panel */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    /* High quality dark luxury carbon supercar backdrop background image */
+    background: url('https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #060608 25%, rgba(6, 6, 8, 0.4) 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
+}
+
+.hero-content h1 {
+    font-size: 56px;
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: 2px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 span {
+    color: #ff3344;
+}
+
+.hero-content p {
+    font-size: 16px;
+    color: #94a3b8;
+    margin-bottom: 35px;
+    line-height: 1.7;
+}
+
+/* Buttons UI Layout */
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-premium {
+    padding: 14px 32px;
+    background: #ff3344;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-premium:hover {
+    background: #e02232;
+    box-shadow: 0 0 25px rgba(255, 51, 68, 0.4);
+    transform: translateY(-2px);
+}
+
+.btn-small {
+    padding: 10px 20px;
+    font-size: 11px;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+.btn-outline:hover {
+    background: #ffffff;
+    color: #060608;
+    border-color: #ffffff;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+}
+
+/* 3. Authentication Modal UI Glass Box styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(3, 3, 4, 0.85);
+    backdrop-filter: blur(15px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.auth-card {
+    background: rgba(20, 20, 25, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 45px;
+    width: 100%;
+    max-width: 440px;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+}
+
+.close-modal-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    background: transparent;
+    border: none;
+    color: #64748b;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.close-modal-btn:hover { color: #ff3344; }
+.auth-card h2 { color: #fff; font-size: 26px; margin-bottom: 8px; letter-spacing: 1px;}
+.auth-card p { color: #64748b; font-size: 14px; margin-bottom: 30px; }
+.auth-form { display: flex; flex-direction: column; gap: 22px; }
+.input-group { display: flex; flex-direction: column; gap: 8px; text-align: left; }
+.input-group label { color: #94a3b8; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;}
+.input-group input { width: 100%; padding: 14px; background: #0c0c0e; border: 1px solid rgba(255,255,255,0.08); color: #fff; border-radius: 4px; font-size: 14px;}
+.input-group input:focus { outline: none; border-color: #ff3344; box-shadow: 0 0 10px rgba(255,51,68,0.1); }
+.auth-switch { margin-top: 25px; font-size: 13px; color: #64748b; text-align: center;}
+.auth-switch a { color: #ff3344; text-decoration: none; font-weight: 600; }

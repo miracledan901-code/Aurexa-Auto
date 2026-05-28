@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUXERA AUTOMOTIVE</title>
+    <!-- Linking our global styling stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. PERSISTENT GLASS NAVIGATION BAR -->
+    <nav class="car-nav">
+        <div class="logo">Auxera<span>.</span></div>
+        
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="marketplace.html">Marketplace</a></li>
+            <li><a href="booking.html">Reservations</a></li>
+            <li><a href="contact.html">Showroom</a></li>
+        </ul>
+
+        <!-- Dynamic Auth Button controlled by our JS gatekeeper -->
+        <div class="nav-actions">
+            <button id="navAuthBtn" class="btn-premium btn-small" onclick="openAuthModal()">Client Portal</button>
+        </div>
+    </nav>
+
+    <!-- 2. HIGH-IMPACT SPLIT HERO SECTION -->
+    <header class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>ENGINEERED FOR <br><span>PERFORMANCE.</span></h1>
+            <p>Welcome to Apex. Enter our digital showroom to acquire premier tier track variants or reserve elite hypercar rentals seamlessly.</p>
+            
+            <div class="hero-buttons">
+                <!-- Directs user to the Marketplace section -->
+                <a href="marketplace.html?mode=buy" class="btn-premium">Browse Dealership</a>
+                <!-- Directs user to the Rental section on the same page -->
+                <a href="marketplace.html?mode=rent" class="btn-premium btn-outline">Explore Rental Fleet</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. PREMIUM AUTHENTICATION MODAL (Hidden by default, triggered on action) -->
+    <div id="authModal" class="modal-overlay">
+        <div class="auth-card">
+            <button class="close-modal-btn" onclick="closeAuthModal()">&times;</button>
+            
+            <!-- Login State -->
+            <div id="loginFormContainer">
+                <h2>Access the Fleet</h2>
+                <p>Log in to your premium profile to initiate bookings.</p>
+                <form class="auth-form" onsubmit="handleAuthSubmit(event, 'login')">
+                    <div class="input-group">
+                        <label>Email Address</label>
+                        <input type="email" id="loginEmail" required placeholder="name@luxury.com">
+                    </div>
+                    <div class="input-group">
+                        <label>Password</label>
+                        <input type="password" id="loginPassword" required placeholder="••••••••">
+                    </div>
+                    <button type="submit" class="btn-premium" style="width: 100%; margin-top: 10px;">Secure Login</button>
+                </form>
+                <p class="auth-switch">New to the showroom? <a href="#" onclick="toggleAuthMode()">Create an Account</a></p>
+            </div>
+
+            <!-- Signup State -->
+            <div id="signupFormContainer" style="display: none;">
+                <h2>Join the Club</h2>
+                <p>Create an account to unlock test drives and custom rentals.</p>
+                <form class="auth-form" onsubmit="handleAuthSubmit(event, 'signup')">
+                    <div class="input-group">
+                        <label>Full Name</label>
+                        <input type="text" id="signupName" required placeholder="John Doe">
+                    </div>
+                    <div class="input-group">
+                        <label>Email Address</label>
+                        <input type="email" id="signupEmail" required placeholder="name@luxury.com">
+                    </div>
+                    <div class="input-group">
+                        <label>Create Password</label>
+                        <input type="password" id="signupPassword" required placeholder="••••••••">
+                    </div>
+                    <button type="submit" class="btn-premium" style="width: 100%; margin-top: 10px;">Register Account</button>
+                </form>
+                <p class="auth-switch">Already a member? <a href="#" onclick="toggleAuthMode()">Log In Instead</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Connecting our master application logic file -->
+    <script src="app.js"></script>
+</body>
+</html>
