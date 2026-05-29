@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUXERA AUTO | Reservations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="car-nav">
+        <div class="logo">AUXERA<span>.</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="marketplace.html">Marketplace</a></li>
+            <li><a href="booking.html" class="active">Reservations</a></li>
+            <li><a href="contact.html">Showroom</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button id="navAuthBtn" class="btn-premium btn-small" onclick="openAuthModal()">Client Portal</button>
+        </div>
+    </nav>
+
+    <div class="car-container">
+        <header class="market-header">
+            <h2>Luxury Transaction Desk</h2>
+            <p>Finalize your vehicle acquisition protocols or schedule private trackside logistics delivery.</p>
+        </header>
+
+        <div class="booking-workspace">
+            
+            <div class="booking-card">
+                <h3>Reservation Request Sheet</h3>
+                <form id="reservationForm" class="auth-form" onsubmit="submitReservation(event)">
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label>First Name</label>
+                            <input type="text" id="bookFirst" required placeholder="Alexander">
+                        </div>
+                        <div class="input-group">
+                            <label>Last Name</label>
+                            <input type="text" id="bookLast" required placeholder="Vane">
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Preferred Variant / Vehicle Model</label>
+                        <input type="text" id="bookVehicle" required placeholder="e.g. Porsche 911 GT3 RS">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Transaction Scheme</label>
+                        <select id="bookScheme">
+                            <option value="purchase">Direct Capital Asset Purchase</option>
+                            <option value="rental">Elite Daily Concierge Rental</option>
+                        </select>
+                    </div>
+
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label>Target Delivery Date</label>
+                            <input type="date" id="bookDate" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Delivery Method</label>
+                            <select id="bookLogistics">
+                                <option value="showroom">Private Showroom Handover</option>
+                                <option value="enclosed">Enclosed Climate-Controlled Hauler</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-premium" style="width: 100%; margin-top: 20px;">Submit Allocation Request</button>
+                </form>
+            </div>
+
+            <div class="summary-card">
+                <h3>Security Clearance Status</h3>
+                <div class="clearance-badge status-active">🔐 Identity Verified via LocalStorage</div>
+                
+                <hr class="summary-divider">
+                
+                <h4>Allocation Overview</h4>
+                <div class="receipt-row">
+                    <span>Priority Allocation Processing</span>
+                    <span class="highlight-text">COMPLIMENTARY</span>
+                </div>
+                <div class="receipt-row">
+                    <span>Escrow Documentation Fee</span>
+                    <span class="highlight-text">WAIVED</span>
+                </div>
+                <div class="receipt-row">
+                    <span>Telemetry Diagnostics Check</span>
+                    <span class="highlight-text">ACTIVE</span>
+                </div>
+                
+                <div class="premium-notice">
+                    <h5>Institutional Notice</h5>
+                    <p>Submission logs an encrypted payload to your active session file system. Our logistics dispatch coordinators will call your private registry line within 15 minutes of clearance.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

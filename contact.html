@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUXERA AUTO | Showroom</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="car-nav">
+        <div class="logo">AUXERA<span>.</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="marketplace.html">Marketplace</a></li>
+            <li><a href="booking.html">Reservations</a></li>
+            <li><a href="contact.html" class="active">Showroom</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button id="navAuthBtn" class="btn-premium btn-small" onclick="openAuthModal()">Client Portal</button>
+        </div>
+    </nav>
+
+    <div class="car-container">
+        <header class="market-header">
+            <h2>The Private Showroom</h2>
+            <p>Connect with our client relationship managers or visit our physical high-security automotive vaults.</p>
+        </header>
+
+        <div class="contact-workspace">
+            
+            <div class="contact-card">
+                <h3>Direct Communications Terminal</h3>
+                <form id="contactForm" class="auth-form" onsubmit="submitContactMessage(event)">
+                    <div class="input-group">
+                        <label>Full Name</label>
+                        <input type="text" id="contactName" required placeholder="Sterling Archer">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Secure Email Line</label>
+                        <input type="email" id="contactEmail" required placeholder="archer@agency.com">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Nature of Inquiry</label>
+                        <select id="contactInquiry">
+                            <option value="brokerage">Bespoke Vehicle Brokerage</option>
+                            <option value="fleet">Corporate Fleet Rentals</option>
+                            <option value="media">Media / Private Showroom Press Access</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Encrypted Transmission Message</label>
+                        <textarea id="contactMessage" rows="5" required placeholder="Detail your acquisition terms or delivery coordination demands..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-premium" style="width: 100%; margin-top: 15px;">Transmit Message</button>
+                </form>
+            </div>
+
+            <div class="details-card">
+                <div class="info-block">
+                    <h4>Vault Headquarters Location</h4>
+                    <p>750 Luxury Fleet Way, Block 4<br>Aviation Logistics District<br>Secure Coordinates: 34.0522° N, 118.2437° W</p>
+                </div>
+
+                <hr class="summary-divider">
+
+                <div class="info-block">
+                    <h4>Showroom Operational Clock</h4>
+                    <div class="hours-row">
+                        <span>Monday - Friday</span>
+                        <span>08:00 - 20:00</span>
+                    </div>
+                    <div class="hours-row">
+                        <span>Saturday (Private Consignment Only)</span>
+                        <span>10:00 - 16:00</span>
+                    </div>
+                    <div class="hours-row">
+                        <span>Sunday</span>
+                        <span class="highlight-text">VAULTS LOCKED</span>
+                    </div>
+                </div>
+
+                <hr class="summary-divider">
+
+                <div class="info-block">
+                    <h4>Direct Registry Contacts</h4>
+                    <p>📟 Concierge Desk: +234 (912) 870-2523<br>📧 Secure Encryption: registry@auxera.auto</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
