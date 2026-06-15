@@ -27,6 +27,51 @@ body {
     backdrop-filter: blur(15px);
 }
 
+/* --- Desktop Default Styles --- */
+.menu-toggle {
+    display: none; /* Hidden on laptops/desktops */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-toggle .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #ffffff; /* Matches your premium aesthetic */
+    transition: all 0.3s ease;
+}
+
+/* --- Universal Mobile Breakpoint Override --- */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* Revealed on smartphones & tablets */
+    }
+
+    .nav-links {
+        display: none; /* Hidden by default on mobile until toggled */
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #0b0b0b; /* Dark luxury fallback background */
+        flex-direction: column !important;
+        padding: 20px 0;
+        text-align: center;
+        border-bottom: 1px solid #1a1a1a;
+    }
+
+    /* Active utility class injected via JavaScript */
+    .nav-links.active {
+        display: flex !important;
+    }
+}
+
 .logo {
     font-size: 26px;
     font-weight: 900;
@@ -93,6 +138,19 @@ body {
     color: #ffffff;
     margin-bottom: 20px;
 }
+
+
+.close-modal-btn:hover { color: #ff3344; }
+.auth-card h2 { color: #fff; font-size: 26px; margin-bottom: 8px; letter-spacing: 1px;}
+.auth-card p { color: #64748b; font-size: 14px; margin-bottom: 30px; }
+.auth-form { display: flex; flex-direction: column; gap: 22px; }
+.input-group { display: flex; flex-direction: column; gap: 8px; text-align: left; }
+.input-group label { color: #94a3b8; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;}
+.input-group input { width: 100%; padding: 14px; background: #0c0c0e; border: 1px solid rgba(255,255,255,0.08); color: #fff; border-radius: 4px; font-size: 14px;}
+.input-group input:focus { outline: none; border-color: #ff3344; box-shadow: 0 0 10px rgba(255,51,68,0.1); }
+.auth-switch { margin-top: 25px; font-size: 13px; color: #64748b; text-align: center;}
+.auth-switch a { color: #ff3344; text-decoration: none; font-weight: 600; }
+
 
 .hero-content h1 span {
     color: #ff3344;
@@ -708,15 +766,4 @@ body {
         width: 100%;
     }
 }
-
-.close-modal-btn:hover { color: #ff3344; }
-.auth-card h2 { color: #fff; font-size: 26px; margin-bottom: 8px; letter-spacing: 1px;}
-.auth-card p { color: #64748b; font-size: 14px; margin-bottom: 30px; }
-.auth-form { display: flex; flex-direction: column; gap: 22px; }
-.input-group { display: flex; flex-direction: column; gap: 8px; text-align: left; }
-.input-group label { color: #94a3b8; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;}
-.input-group input { width: 100%; padding: 14px; background: #0c0c0e; border: 1px solid rgba(255,255,255,0.08); color: #fff; border-radius: 4px; font-size: 14px;}
-.input-group input:focus { outline: none; border-color: #ff3344; box-shadow: 0 0 10px rgba(255,51,68,0.1); }
-.auth-switch { margin-top: 25px; font-size: 13px; color: #64748b; text-align: center;}
-.auth-switch a { color: #ff3344; text-decoration: none; font-weight: 600; }
 

@@ -7,20 +7,26 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <nav class="car-nav">
-        <div class="logo">AUXERA<span>.</span></div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="marketplace.html">Marketplace</a></li>
-            <li><a href="booking.html">Reservations</a></li>
-            <li><a href="contact.html" class="active">Showroom</a></li>
-        </ul>
-        <div class="nav-actions">
-            <button id="navAuthBtn" class="btn-premium btn-small" onclick="openAuthModal()">Client Portal</button>
-        </div>
-    </nav>
+  <div class="nav-logo">Auxera Auto</div>
+  
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
 
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="marketplace.html">Marketplace</a>
+    <a href="booking.html">Reservations</a>
+    <a href="contact.html">Showroom</a>
+  </div>
+  
+  <div class="nav-actions">
+    <a href="#" class="btn-premium">Client Portal</a>
+  </div>
+</nav>
     <div class="car-container">
         <header class="market-header">
             <h2>The Private Showroom</h2>
@@ -83,6 +89,20 @@
                         <span class="highlight-text">VAULTS LOCKED</span>
                     </div>
                 </div>
+
+                <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="contact-form">
+  
+                    <div class="input-row">
+                        <input type="text" name="name" placeholder="Full Name" required />
+                        <input type="email" name="email" placeholder="Your Client Email" required />
+                    </div>
+
+                    <textarea name="message" placeholder="Direct Communications Terminal Message..." required></textarea>
+
+                    <input type="text" name="_gotcha" style="display:none" />
+
+                    <button type="submit" class="btn-premium">Send Encrypted Message</button>
+                </form>
 
                 <hr class="summary-divider">
 

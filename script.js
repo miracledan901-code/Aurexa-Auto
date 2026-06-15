@@ -215,3 +215,33 @@ function submitReservation(event) {
     // Clear the worksheet fields cleanly after registration notification
     document.getElementById('reservationForm').reset();
 }
+
+const auxeraFleet = [
+  // --- SUPERCAR / HYPERCAR CATEGORY ---
+  { id: 1, name: "Porsche 911 GT3 RS", brand: "Porsche", price: 223000, category: "supercar", transmission: "Automatic", img: "porche.jpg" },
+  { id: 2, name: "Mercedes-AMG GT Black Series", brand: "Mercedes", price: 325000, category: "supercar", transmission: "Automatic", img: "mercedes-amg.jpg" },
+  { id: 3, name: "Ferrari SF90 Stradale", brand: "Ferrari", price: 507000, category: "supercar", transmission: "Automatic", img: "ferrari-sf90.jpg" },
+  { id: 4, name: "Lamborghini Revuelto", brand: "Lamborghini", price: 608000, category: "supercar", transmission: "Automatic", img: "lamborghini-rev.jpg" },
+  { id: 5, name: "McLaren 750S Spider", brand: "McLaren", price: 345000, category: "supercar", transmission: "Automatic", img: "mclaren-750s.jpg" },
+  { id: 6, name: "Aston Martin DBS Volante", brand: "Aston Martin", price: 387000, category: "supercar", transmission: "Automatic", img: "aston-dbs.jpg" },
+  { id: 7, name: "Bugatti Chiron Super Sport", brand: "Bugatti", price: 3825000, category: "supercar", transmission: "Automatic", img: "bugatti-chiron.jpg" },
+
+  // --- LUXURY SUVS ---
+  { id: 8, name: "Lamborghini Urus Performante", brand: "Lamborghini", price: 260000, category: "suv", transmission: "Automatic", img: "urus-perf.jpg" },
+  { id: 9, name: "Rolls-Royce Cullinan Mansory", brand: "Rolls-Royce", price: 480000, category: "suv", transmission: "Automatic", img: "cullinan.jpg" },
+  { id: 10, name: "Mercedes-Benz G63 AMG Brabus", brand: "Mercedes", price: 298000, category: "suv", transmission: "Automatic", img: "g63-brabus.jpg" },
+  { id: 11, name: "Range Rover SV Autobiography", brand: "Range Rover", price: 220000, category: "suv", transmission: "Automatic", img: "rangerover-sv.jpg" },
+  { id: 12, name: "Aston Martin DBX707", brand: "Aston Martin", price: 242000, category: "suv", transmission: "Automatic", img: "dbx707.jpg" },
+  { id: 13, name: "Bentley Bentayga Speed", brand: "Bentley", price: 265000, category: "suv", transmission: "Automatic", img: "bentayga.jpg" },
+
+  // --- LUXURY SEDANS & COUPES ---
+  { id: 14, name: "Rolls-Royce Phantom VIII", brand: "Rolls-Royce", price: 460000, category: "luxury", transmission: "Automatic", img: "phantom.jpg" },
+  { id: 15, name: "Bentley Continental GT", brand: "Bentley", price: 238000, category: "luxury", transmission: "Automatic", img: "continental-gt.jpg" },
+  { id: 16, name: "BMW M8 Competition Gran Coupe", brand: "BMW", price: 135000, category: "luxury", transmission: "Automatic", img: "bmw-m8.jpg" },
+  { id: 17, name: "Audi RS7 Exclusive Edition", brand: "Audi", price: 127000, category: "luxury", transmission: "Automatic", img: "audi-rs7.jpg" },
+
+  // --- TRACK & EXOTIC SPECIALS ---
+  { id: 18, name: "Pagani Huayra Roadster", brand: "Pagani", price: 2800000, category: "exotic", transmission: "Manual", img: "pagani-huayra.jpg" },
+  { id: 19, name: "Koenigsegg Jesko Absolut", brand: "Koenigsegg", price: 3000000, category: "exotic", transmission: "Automatic", img: "jesko.jpg" },
+  { id: 20, name: "Ford GT Heritage Edition", brand: "Ford", price: 500000, category: "exotic", transmission: "Automatic", img: "ford-gt.jpg" }
+];

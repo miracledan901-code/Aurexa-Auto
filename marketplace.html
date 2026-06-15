@@ -7,20 +7,26 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <nav class="car-nav">
-        <div class="logo">AUXERA<span>.</span></div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="marketplace.html" class="active">Marketplace</a></li>
-            <li><a href="booking.html">Reservations</a></li>
-            <li><a href="contact.html">Showroom</a></li>
-        </ul>
+        <div class="nav-logo">Auxera Auto</div>
+  
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+         <div class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="marketplace.html">Marketplace</a>
+            <a href="booking.html">Reservations</a>
+            <a href="contact.html">Showroom</a>
+         </div>
+  
         <div class="nav-actions">
-            <button id="navAuthBtn" class="btn-premium btn-small" onclick="openAuthModal()">Client Portal</button>
+         <a href="#" class="btn-premium btn-small" onclick="openAuthModal()">Client Portal</a>
         </div>
     </nav>
-
     <div class="car-container">
         <header class="market-header">
             <h2>Our Digital Showroom</h2>

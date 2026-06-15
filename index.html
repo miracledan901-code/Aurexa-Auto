@@ -8,24 +8,26 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<nav class="car-nav">
+  <div class="nav-logo">Auxera Auto</div>
+  
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
 
-    <!-- 1. PERSISTENT GLASS NAVIGATION BAR -->
-    <nav class="car-nav">
-        <div class="logo">Auxera<span>.</span></div>
-        
-        <ul class="nav-links">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="marketplace.html">Marketplace</a></li>
-            <li><a href="booking.html">Reservations</a></li>
-            <li><a href="contact.html">Showroom</a></li>
-        </ul>
-
-        <!-- Dynamic Auth Button controlled by our JS gatekeeper -->
-        <div class="nav-actions">
-            <button id="navAuthBtn" class="btn-premium btn-small" onclick="openAuthModal()">Client Portal</button>
-            
-        </div>
-    </nav>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="marketplace.html">Marketplace</a>
+    <a href="booking.html">Reservations</a>
+    <a href="contact.html">Showroom</a>
+  </div>
+  
+  <div class="nav-actions">
+    <a href="#" class="btn-premium btn-small" onclick="openAuthModal()">Client Portal</a>
+  </div>
+</nav>
 
     <!-- 2. HIGH-IMPACT SPLIT HERO SECTION -->
     <header class="hero-section">
